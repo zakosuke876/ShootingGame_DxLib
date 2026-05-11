@@ -25,13 +25,17 @@ public:
 	}
 
 	// 弾発射
+	/// <summary>
+	/// タイマーを更新し、発射タイミングに達したか判定する
+	/// </summary>
+	/// <returns>発射タイミングであれば,true : そうでなければ,false</returns>
 	bool Shot();
 	int GetBulletStartX() const { return x + SPRITE_W * ENEMY_SCALE / 2; } // 弾の発射X座標(敵の中央)
 	int GetBulletStartY() const { return y + SPRITE_H * ENEMY_SCALE; }    // 弾の発射Y座標(敵の下端)
 
 	// 更新・描画
 	void Update(int playerX, int playerY);
-	void Draw();
+	void Draw() const;
 
 private:
 	// スプライト設定

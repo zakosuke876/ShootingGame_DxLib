@@ -53,12 +53,13 @@ void Enemy::Update(int playerX, int playerY) {
 	y += speed;
 
 	// 画面外に出たら非アクティブ状態にする
-	if (y > GameConfig::screen_H)
+	if (y > GameConfig::SCREEN_H)
 	{
 		isActive = false;
 	}
 
 }
+
 
 bool Enemy::Shot() {
 	shotTimer++;
@@ -73,7 +74,7 @@ bool Enemy::Shot() {
 	return false;
 }
 
-void Enemy::Draw() {
+void Enemy::Draw() const {
 	if (!isActive) return;
 	DrawExtendGraph(x, y, x + SPRITE_W * ENEMY_SCALE, y + SPRITE_H * ENEMY_SCALE, currentEnemyHandle, TRUE);
 }

@@ -18,6 +18,40 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameObject\Bullet.cpp" />
+    <ClCompile Include="GameObject\Enemy.cpp" />
+    <ClCompile Include="GameObject\EnemyBullet.cpp" />
+    <ClCompile Include="GameObject\Player.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager\Background.cpp" />
+    <ClCompile Include="Manager\EnemyManager.cpp" />
+    <ClCompile Include="Manager\FontManager.cpp" />
+    <ClCompile Include="Manager\RankingManager.cpp" />
+    <ClCompile Include="Manager\ScoreManager.cpp" />
+    <ClCompile Include="Manager\SoundManager.cpp" />
+    <ClCompile Include="Scene\HUDManager.cpp" />
+    <ClCompile Include="Scene\SceneUIManager.cpp" />
+    <ClCompile Include="System\CollisionUtil.cpp" />
+    <ClCompile Include="System\GameManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject\Bullet.h" />
+    <ClInclude Include="GameObject\Enemy.h" />
+    <ClInclude Include="GameObject\EnemyBullet.h" />
+    <ClInclude Include="GameObject\Player.h" />
+    <ClInclude Include="Manager\Background.h" />
+    <ClInclude Include="Manager\EnemyManager.h" />
+    <ClInclude Include="Manager\FontManager.h" />
+    <ClInclude Include="Manager\RankingManager.h" />
+    <ClInclude Include="Manager\ScoreManager.h" />
+    <ClInclude Include="Manager\SoundManager.h" />
+    <ClInclude Include="Scene\HUDManager.h" />
+    <ClInclude Include="Scene\SceneUIManager.h" />
+    <ClInclude Include="System\CollisionUtil.h" />
+    <ClInclude Include="System\GameConfig.h" />
+    <ClInclude Include="System\GameManager.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -76,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>"C:\Users\yatoh\Downloads\DxLib_VC3_24f (1)\DxLib_VC\プロジェクトに追加すべきファイル_VC用"</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"C:\Users\yatoh\Downloads\DxLib_VC3_24f (1)\DxLib_VC\プロジェクトに追加すべきファイル_VC用"; $(ProjectDir)include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -111,7 +145,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>"C:\Users\yatoh\Downloads\DxLib_VC3_24f (1)\DxLib_VC\プロジェクトに追加すべきファイル_VC用"</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"C:\Users\yatoh\Downloads\DxLib_VC3_24f (1)\DxLib_VC\プロジェクトに追加すべきファイル_VC用"; $(ProjectDir)include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -140,40 +174,6 @@
       <AdditionalLibraryDirectories>"C:\Users\yatoh\Downloads\DxLib_VC3_24f (1)\DxLib_VC\プロジェクトに追加すべきファイル_VC用"</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Background.cpp" />
-    <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="CollisionUtil.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyBullet.cpp" />
-    <ClCompile Include="EnemyManager.cpp" />
-    <ClCompile Include="FontManager.cpp" />
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="HUDManager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RankingManager.cpp" />
-    <ClCompile Include="SceneUIManager.cpp" />
-    <ClCompile Include="ScoreManager.cpp" />
-    <ClCompile Include="SoundManager.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Background.h" />
-    <ClInclude Include="Bullet.h" />
-    <ClInclude Include="CollisionUtil.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyBullet.h" />
-    <ClInclude Include="EnemyManager.h" />
-    <ClInclude Include="FontManager.h" />
-    <ClInclude Include="GameConfig.h" />
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="HUDManager.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="RankingManager.h" />
-    <ClInclude Include="SceneUIManager.h" />
-    <ClInclude Include="ScoreManager.h" />
-    <ClInclude Include="SoundManager.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -8,4 +8,6 @@ public:
 
 private:
 	int score = 0;
+	static constexpr int SCORE_TEXT_X = 30;
+	static constexpr int SCORE_TEXT_Y = 20;
 };

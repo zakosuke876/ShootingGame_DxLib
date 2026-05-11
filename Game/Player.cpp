@@ -9,13 +9,13 @@ int Player::explosionHandles[FRAME_NUM];
 
 // èâä˙âª
 Player::Player() {
-	x = GameConfig::screen_W / 2;
-	y = GameConfig::screen_H / 2;
+	x = GameConfig::SCREEN_W / 2;
+	y = GameConfig::SCREEN_H / 2;
 	speed = 10;
 	LoadDivGraph("images/Ships.png", 3, 3, 1, 8, 8, playerHandles);
 	currentPlayerHandle = playerHandles[1];
 	currentBulletIndex = 2;
-	hp = 1;
+	hp = 5;
 	hpGaugeLength = hp - 1;
 }
 
@@ -120,7 +120,7 @@ void Player::ChangeHandle() {
 }
 
 // ï`âÊ
-void Player::Draw() {
+void Player::Draw() const {
 
 	for (auto& exp : explosions)
 	{
@@ -144,8 +144,10 @@ void Player::Draw() {
 /// à⁄ìÆîÕàÕÇêßå¿Ç∑ÇÈ
 /// </summary>
 void Player::ClampPosition() {
-	x = std::clamp(x, 0, GameConfig::screen_W - SPRITE_W * PLAYER_SCALE);
-	y = std::clamp(y, 0, GameConfig::screen_H - SPRITE_H * PLAYER_SCALE);
+	if (x < 0) x = 0;
+	if (x > GameConfig::SCREEN_W - SPRITE_W * PLAYER_SCALE) x = GameConfig::SCREEN_W - SPRITE_W * PLAYER_SCALE;
+	if (y < 0) y = 0;
+	if (y > GameConfig::SCREEN_H - SPRITE_H * PLAYER_SCALE) y = GameConfig::SCREEN_H - SPRITE_H * PLAYER_SCALE;
 }
 
 void Player::ChangeBullet() {
@@ -185,13 +187,13 @@ bool Player::IsExplosionFinished() const {
 }
 
 void Player::DrawPlayerHp() const {
-	int x = GameConfig::screen_W - 1180;
-	int y = GameConfig::screen_H - 30;
+	int x = GameConfig::SCREEN_W - 1180;
+	int y = GameConfig::SCREEN_H - 30;
 
 	constexpr int BOX_W = 20; // ïù
 	constexpr int SPACE = 5;  // ä‘äu
 
-	DrawString(GameConfig::screen_W - 1250, GameConfig::screen_H - 30, "Energy", GetColor(255, 0, 0));
+	DrawString(GameConfig::SCREEN_W - 1250, GameConfig::SCREEN_H - 30, "Energy", GetColor(255, 0, 0));
 
 	// HPÇï\Ç∑BoxÇï`âÊ
 	for (int i = 0; i < hp; i++)

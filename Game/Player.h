@@ -29,7 +29,7 @@ public:
 
 	// XVE•`‰æ
 	void Update();
-	void Draw();
+	void Draw() const;
 	void DrawPlayerHp() const;
 
 private:

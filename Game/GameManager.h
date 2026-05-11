@@ -10,7 +10,6 @@ enum class GameState {
 	Playing,
 	Dying, // €–S‰‰o’†
 	GameOver,
-	Clear
 };
 
 class GameManager {

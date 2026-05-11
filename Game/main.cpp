@@ -18,7 +18,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	ChangeWindowMode(FALSE);
-	SetGraphMode(GameConfig::screen_W, GameConfig::screen_H, 32);
+	SetGraphMode(GameConfig::SCREEN_W, GameConfig::SCREEN_H, 32);
 	SetMainWindowText("Game");
 	SetWaitVSyncFlag(FALSE);
 
@@ -68,12 +68,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				break;
 
 			case GameState::Playing:
-			{
+
 				backGround.Update();
 				gameManager.UpdatePlaying(player, enemyManager, scoreManager, rankingManager);
 				
 				break;
-			}
 
 			case GameState::Dying:
 
@@ -84,10 +83,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			case GameState::GameOver:
 
 				gameManager.UpdateGameOver(rankingManager);
-				break;
-
-			case GameState::Clear:
-
 				break;
 
 			default:
@@ -106,7 +101,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				break;
 
 			case GameState::Playing:
-			{
+
 				backGround.Draw();
 
 				player.Draw();
@@ -116,7 +111,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				hudManager.Draw(player, scoreManager);
 
 				break;
-			}
 
 			case GameState::Dying:
 
@@ -135,10 +129,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				sceneUIManager.DrawGameOver(scoreManager);
 
 				rankingManager.Draw();
-
-				break;
-
-			case GameState::Clear:
 
 				break;
 

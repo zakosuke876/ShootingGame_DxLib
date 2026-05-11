@@ -31,7 +31,7 @@ void Bullet::Update() {
 	}
 }
 
-void Bullet::Draw() {
+void Bullet::Draw() const {
 	if (!isActive) return;
 	DrawExtendGraph(x, y, x + SPRITE_W * BULLET_SCALE, y + SPRITE_H * BULLET_SCALE, currentBulletHandle, TRUE);
 }

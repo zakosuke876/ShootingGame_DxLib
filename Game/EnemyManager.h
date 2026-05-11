@@ -14,13 +14,20 @@ public:
 	EnemyManager();
 
 	// 当たり判定
+	// Playerの弾とEnemyとの当たり判定を行う(弾と敵の種類(色)が一致しているならダメージ。不一致なら反射)
 	void CheckBulletHit(Bullet* bullets, int maxBullets, ScoreManager& score);
+
+	// PlayerとEnemyの当たり判定を行う
+	// Playerが死亡した場合 true を返す
 	bool CheckPlayerHit(Player& player);
+
+	// PlayerとEnemyの弾の当たり判定を行う
+	// Playerが死亡した場合 true を返す
 	bool CheckEnemyBulletHit(Player& player);
 
 	// 更新・描画
 	void Update(Player& player);
-	void Draw();
+	void Draw() const;
 	
 
 private:

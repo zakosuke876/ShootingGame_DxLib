@@ -24,7 +24,7 @@ public:
 
 	// 更新・描画
 	void Update();
-	void Draw();
+	void Draw() const;
 	
 private:
 	// スプライト設定
@@ -35,9 +35,10 @@ private:
 	static int bulletHandles[BULLET_NUM];
 
 	// 状態
-	int x, y;
+	int x = 0;
+	int y = 0;
 	int vY = -30;
 	int currentBulletHandle;
-	int bulletType;
+	int bulletType = 0;
 	bool isActive = false;
 };

@@ -28,8 +28,8 @@ void EnemyBullet::Update() {
 	y += vY;
 
 	// 画面外に出たら非アクティブにする
-	if (x < 0 || x + SPRITE_W * BULLET_SCALE > GameConfig::screen_W || // 画面の右端または左端に達した
-		y < 0 || y + SPRITE_H * BULLET_SCALE > GameConfig::screen_H) // 画面上端または下端に達した
+	if (x < 0 || x + SPRITE_W * BULLET_SCALE > GameConfig::SCREEN_W || // 画面の右端または左端に達した
+		y < 0 || y + SPRITE_H * BULLET_SCALE > GameConfig::SCREEN_H) // 画面上端または下端に達した
 	{
 		isActive = false;
 	}

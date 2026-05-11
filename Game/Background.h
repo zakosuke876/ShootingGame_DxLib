@@ -4,7 +4,7 @@ class BackGround {
 public:
 	BackGround();
 	void Update();
-	void Draw();
+	void Draw() const;
 
 private:
 	int backHandle;

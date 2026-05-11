@@ -14,8 +14,8 @@ private:
 	int newRank = RANKING_NUM + 1; // ‰Šúó‘Ô‚ÍŒ—ŠO
 	
 	// •`‰æİ’è
-	static constexpr int BASE_X = GameConfig::screen_W / 2 + 30; // ’†‰›‚©‚ç­‚µ¶‚É‚¸‚ç‚·
-	static constexpr int BASE_Y = GameConfig::screen_H / 2 + 30; // ’†‰›‚©‚ç­‚µ‰º‚É‚¸‚ç‚·
+	static constexpr int BASE_X = GameConfig::SCREEN_W / 2 + 30; // ’†‰›‚©‚ç­‚µ¶‚É‚¸‚ç‚·
+	static constexpr int BASE_Y = GameConfig::SCREEN_H / 2 + 30; // ’†‰›‚©‚ç­‚µ‰º‚É‚¸‚ç‚·
 	static constexpr int LINE_WIDTH = 100; // ’†‰›‚©‚ç‚¸‚ç‚·’l(X)
 	static constexpr int LINE_HEIGHT = 100; // ’†‰›‚©‚ç‚¸‚ç‚·’l(Y)
 	

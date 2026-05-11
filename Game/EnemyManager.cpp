@@ -56,7 +56,7 @@ void EnemyManager::Update(Player& player) {
 	RemoveInactive();
 }
 
-void EnemyManager::Draw() {
+void EnemyManager::Draw() const {
 	for (auto& e : enemies)
 	{
 		e.Draw();
@@ -151,7 +151,7 @@ bool EnemyManager::CheckEnemyBulletHit(Player& player)
 void EnemyManager::Spawn() {
 	spawnTimer++;
 	if (spawnTimer >= SPAWN_INTERVAL) {
-		int rx = GetRand(GameConfig::screen_W - 100) + 50;
+		int rx = GetRand(GameConfig::SCREEN_W - 100) + 50;
 
 		// ¶¬‚·‚é“G‚Ìí—Ş‚ğŒˆ‚ß‚é
 		int typeIndex = GetRand(Enemy::GetHandleNum() - 1);
