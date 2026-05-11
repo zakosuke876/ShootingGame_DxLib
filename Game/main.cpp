@@ -110,6 +110,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 				hudManager.Draw(player, scoreManager);
 
+				sceneUIManager.DrawPlaying();
+
 				break;
 
 			case GameState::Dying:

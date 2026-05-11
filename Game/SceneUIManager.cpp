@@ -19,6 +19,15 @@ void SceneUIManager::DrawTitle() const {
 		FontManager::GetUIFont());
 }
 
+void SceneUIManager::DrawPlaying() const {
+	DrawStringToHandle(
+		GAMEFINISH_MESSAGE_X,
+		GAMEFINISH_MESSAGE_Y,
+		"ESCキーでゲーム終了",
+		GetColor(255, 0, 255),
+		FontManager::GetPlayingFont());
+}
+
 void SceneUIManager::DrawGameOver(const ScoreManager& score) const {
 	DrawStringToHandle(
 		GAMEOVER_MESSAGE_X,
